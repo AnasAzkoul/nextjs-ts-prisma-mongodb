@@ -1,0 +1,17 @@
+.header {
+
+}
+
+.header h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.image {
+  max-width: 50rem;
+  max-height: 50rem;
+  margin-inline: auto;
+  margin-block: 2rem;
+}

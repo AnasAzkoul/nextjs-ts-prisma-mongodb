@@ -1,0 +1,16 @@
+.featured {
+  margin-block: 4rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 115rem;
+    margin-inline: auto;
+  }
+  
+  .featured h2 {
+    text-align: start;
+  }
+}

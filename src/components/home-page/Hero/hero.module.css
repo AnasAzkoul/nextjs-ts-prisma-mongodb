@@ -1,0 +1,47 @@
+.hero {
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-grey-900),
+    var(--color-grey-800)
+  );
+  padding: var(--size-8) 0;
+}
+
+.image {
+  max-width: 30rem;
+  max-height: 30rem;
+  margin: auto;
+}
+
+.image img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+
+.content h1 {
+  font-size: var(--size-16);
+  margin: var(--size-4) 0;
+  color: var(--color-grey-300);
+}
+
+.content p {
+  font-size: var(--size-6);
+  color: var(--color-grey-200);
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+}
+
+@media screen and (min-width: 765px) {
+  .image {
+    flex: 1;
+  }
+  
+  .content {
+    flex: 1; 
+    align-self: center;
+  }
+}

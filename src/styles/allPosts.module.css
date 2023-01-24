@@ -1,0 +1,11 @@
+.allPosts {
+  width: 100%;
+  max-width: 115rem;
+  margin-inline: auto;
+}
+
+.allPosts h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-block: 4rem;
+}

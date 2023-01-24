@@ -1,0 +1,42 @@
+.header {
+  background-color: var(--color-grey-900);
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-block: 2rem;
+}
+
+.logo a {
+  color: whitesmoke;
+  font-size: clamp(1.8rem, 2vw, 2rem);
+}
+
+.navContainer  nav {
+  flex-basis: 25%;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+}
+
+.navLinks > *:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.link {
+  font-size: 1.5rem;
+}
+
+.link a {
+  color: white;
+}
+
+.link a:hover {
+  color: var(--color-grey-500);
+}
