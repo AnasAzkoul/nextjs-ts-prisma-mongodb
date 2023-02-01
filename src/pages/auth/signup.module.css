@@ -1,0 +1,57 @@
+.signup {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.controls {
+  background-color: darkgray;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.form__control {
+  margin-bottom: 1rem;
+}
+
+.form__control label{
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+.form__control input, 
+.form__control input:active {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.btn_container {
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  
+}
+
+.signin_link {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}

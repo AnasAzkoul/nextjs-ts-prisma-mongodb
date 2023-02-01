@@ -24,3 +24,11 @@ export function validateFormInputs(form: FormTypes) {
     error: !validate.success ? fromZodError(validate.error) : null
   }
 }
+
+export const newUserSchema = z.object({
+  name: z.string().trim().min(3), 
+  email: z.string().email(), 
+  password: z.string().trim().min(5), 
+})
+
+export type NewUserTypes = z.infer<typeof newUserSchema>

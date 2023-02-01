@@ -1,17 +1,30 @@
 import React from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import PostContent from '@/components/posts/PostDetails/PostContent';
 import { getAllPosts } from '@/Utils/post-utils';
-import type { PostDataTypes } from '@/Utils/post-utils';
+import type {PostDataTypes} from '@/Utils/post-utils';
+import { useSession } from 'next-auth/react';
 
 type Props = {
   post: PostDataTypes;
 };
 
 const SinglePostPage = ({ post }: Props) => {
-  const { query } = useRouter();
-
+  const session = useSession(); 
+  
+  if (session.status === 'loading') {
+    return <h2>Loading...</h2>
+  }
+  
+  if (session.status === 'unauthenticated') {
+    return <h2>
+      You need to sign in in order to view the post detail
+      <Link href='/auth/signin'>Sign in</Link>
+    </h2>
+  }
+  
   return <PostContent post={post} />;
 };
 

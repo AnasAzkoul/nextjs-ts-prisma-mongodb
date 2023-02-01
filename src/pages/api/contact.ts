@@ -1,10 +1,9 @@
-import { PrismaClient } from '@prisma/client';
+import {prisma}  from '../../Utils/db';
 import type {NextApiRequest, NextApiResponse} from 'next'
 import {validateFormInputs} from '@/Utils/validation';
-
 import type {FormTypes} from '@/Utils/validation';
 
-const prisma = new PrismaClient(); 
+
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   await prisma.$connect(); 

@@ -1,0 +1,42 @@
+.container {
+  margin-top: 5rem;
+  padding: 0.2rem;
+  max-width: 65rem;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  border-radius: 1rem;
+}
+
+.form__title {
+  margin-bottom: 3rem;
+}
+
+.form__control:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__control > * {
+  display: block;
+}
+
+.form__control label {
+  margin-bottom: 0.5rem;
+}
+
+.form__control > input {
+  display: block;
+  margin-inline: auto;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem; 
+}
+
+.btn {
+  padding: 0.5rem 1rem; 
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+  
+}

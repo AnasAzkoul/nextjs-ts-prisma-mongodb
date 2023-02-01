@@ -3,13 +3,19 @@ import FeaturedPosts from '@/components/home-page/featured-posts/FeaturedPosts';
 import styles from '@/styles/Home.module.css';
 import type { PostDataTypes } from '@/Utils/post-utils';
 import { getFeaturedPosts } from '@/Utils/post-utils';
-import { GetStaticProps } from 'next';
+import {GetStaticProps} from 'next';
+import { useSession } from 'next-auth/react';
 
 type Props = {
   featuredPosts: PostDataTypes[];
 };
 
-export default function Home({ featuredPosts }: Props) {
+export default function Home({featuredPosts}: Props) {
+  
+  const session = useSession(); 
+  
+
+  
   return (
     <>
       <main className={styles.main}>
