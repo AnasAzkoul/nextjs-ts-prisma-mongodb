@@ -9,8 +9,7 @@ const SignIn = (props: Props) => {
   const emailRef = useRef<HTMLInputElement>(null)
   const passRef = useRef<HTMLInputElement>(null)
   const router = useRouter(); 
-  
-  
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault(); 
     
@@ -21,8 +20,11 @@ const SignIn = (props: Props) => {
     });
     
     if (res?.ok === true) {
-      router.push('/')
+      router.push('/'); 
     }
+    
+    emailRef.current!.value = ''
+    passRef.current!.value = ''
   }
   
   return (

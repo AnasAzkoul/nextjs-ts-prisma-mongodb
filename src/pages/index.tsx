@@ -14,6 +14,7 @@ export default function Home({featuredPosts}: Props) {
   
   const session = useSession(); 
   
+console.log(session);
 
   
   return (

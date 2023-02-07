@@ -4,17 +4,30 @@ import PostHeader from './PostHeader';
 import styles from './postContent.module.css';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import type { PostDataTypes } from '@/Utils/post-utils';
-import { Prism } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { PrismLight } from 'react-syntax-highlighter';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 
 type Props = {
   post: PostDataTypes;
 };
 
+PrismLight.registerLanguage('js', js);
+PrismLight.registerLanguage('css', css);
+
 function PostContent({ post }: Props) {
   const customRenderers = {
     img(image: any) {
-      return <Image src={image.src} alt={image.alt} width={600} height={300} layout='intrinsic'/>;
+      return (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={600}
+          height={300}
+          layout='intrinsic'
+        />
+      );
     },
     // p(paragraph: any) {
     //   const {node} = paragraph;
@@ -40,9 +53,9 @@ function PostContent({ post }: Props) {
       const language = className.split('-')[1];
 
       return (
-        <Prism language={language} style={atomDark}>
+        <PrismLight language={language} style={atomDark}>
           {children}
-        </Prism>
+        </PrismLight>
       );
     },
   };
